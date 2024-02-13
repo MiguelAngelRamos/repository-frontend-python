@@ -35,7 +35,45 @@ header {
 }
 
 @media screen and (max-width: 596px) {
-  nav {
+
+  .abrir-menu, 
+  .cerrar-menu {
+    display: block;
+    font-size: 1.25rem;
+  }
+
+  .abrir-menu {
+    color: white;
+    font-size: 2rem;
+  }
+  .cerrar-menu {
+    font-size: 2rem;
+    color: white;
+  }
+  .nav {
     opacity: 0;
+    visibility: hidden;
+    width: 60%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1c1c1c;
+    padding: 2rem;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 20;
+  }
+
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-list {
+    display: flex;
+    margin-top: 4rem;
+    font-size: 1rem;
+    flex-direction: column;
+    align-items: flex-end;
   }
 }
