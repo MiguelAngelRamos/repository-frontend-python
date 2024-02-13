@@ -23,3 +23,10 @@ body {
   border-radius: 0.450rem;
   /* overflow: hidden; */
 }
+
+@media screen and (max-width: 596px) {
+  .texto {
+    width:calc(50% - 1rem)
+  }
+  
+}
