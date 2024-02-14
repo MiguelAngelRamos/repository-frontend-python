@@ -5,7 +5,15 @@ document.addEventListener('DOMContentLoaded', function() {
  const input = document.querySelector('#taskinput');
  const tasksList = document.querySelector('#tasksList');
 
+ // El boton para agregar tarea
+ addButton.addEventListener('click', function() {
+    addTask(input.value);
+    input.value = '';
+ });
+ 
+ // Es la caja de texto
  input.addEventListener('keypress', function(event){
+
       if(event.key === 'Enter') {
         addTask(input.value);
         input.value = '';
@@ -13,7 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
  })
 
 // task = Aprender Python
+// Función que nos permite agregar una tarea al "ul"
  function addTask(task) {
+  
   if(task.trim() !== '') {
     // <li></li>
     const li = document.createElement('li');
@@ -24,6 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // <ul>
     //   <li>Aprender Python</li>
     // </ul>
+  } else {
+    alert('debes ingresar una tarea')
   }
  }
 
