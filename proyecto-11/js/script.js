@@ -4,6 +4,7 @@ document.querySelector('#formularioRegistro').addEventListener('submit', functio
   const password = document.querySelector('#password').value;
   const errorEmail = document.querySelector('#errorEmail');
   const errorPassword = document.querySelector('#errorPassword');
+  
   const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
   //* miguel@correo.com "la regex para este caso retorna: true "
